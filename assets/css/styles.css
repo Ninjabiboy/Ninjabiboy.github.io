@@ -299,6 +299,7 @@ img {
 
 .home__title{
   font-size: var(--big-font-size);
+  margin-top: 6.8rem;
 }
 
 .home__subtitle{
@@ -730,6 +731,7 @@ img {
   .home__img{
     order: 1;
     justify-self: center;
+    margin-bottom: 1rem;
   }
 
   .about__container,
@@ -815,6 +817,11 @@ img {
   }
   .home__scroll{
     display: block;
+    text-align: center; /*added*/
+     /*added*/
+    margin-top: 1rem;
+    margin-right: 3rem;
+
   }
   .home__scroll-button{
     margin-left: 3rem;
