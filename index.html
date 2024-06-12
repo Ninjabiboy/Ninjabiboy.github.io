@@ -1,0 +1,521 @@
+<!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <!--==================== UNICONS ====================-->
+        <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.8/css/line.css">
+
+        <!--==================== SWIPER CSS ====================-->
+        <link rel="stylesheet" href="assets/css/swiper-bundle.min.css">
+        
+        <!--==================== CSS ====================-->
+        <link rel="stylesheet" href="assets/css/styles.css">
+
+        <!--==================== FAVICON ====================-->
+        <link rel="icon" href="/assets/img/uil--user.png">
+
+        <title>James Portfolio Website</title>
+    </head>
+    <body>
+        <!--==================== HEADER ====================-->
+        <header class="header" id="header">
+            <nav class="nav container">
+                <a href="#" class="nav__logo">James</a>
+                
+                <div class="nav__menu" id="nav-menu">
+                    <ul class="nav__list grid">
+                        <li class="nav__item">
+                            <a href="#home" class="nav__link active-link">
+                                <i class="uil uil-estate nav__icon"></i>Home
+                            </a>
+                        </li>
+                        <li class="nav__item">
+                            <a href="#about" class="nav__link">
+                                <i class="uil uil-user nav__icon"></i>About
+                            </a>
+                        </li>
+                        <li class="nav__item">
+                            <a href="#skills" class="nav__link">
+                                <i class="uil uil-file-alt nav__icon"></i>Skills
+                            </a>
+                        </li>
+                        <li class="nav__item">
+                            <a href="#portfolio" class="nav__link">
+                                <i class="uil uil-scenery nav__icon"></i>Portfolio
+                            </a>
+                        </li>
+                        <li class="nav__item">
+                            <a href="#contact" class="nav__link">
+                                <i class="uil uil-message nav__icon"></i>Contact
+                            </a>
+                        </li>
+                    </ul>
+                    <i class="uil uil-times nav__close" id="nav-close"></i>
+                </div>
+
+                <div class="nav__btns">
+                    <!-- Theme change button -->
+                    <i class="uil uil-moon change-theme" id="theme-button"></i>
+                    
+                    <div class="nav__toggle" id="nav-toggle">
+                        <i class="uil uil-apps"></i>
+                    </div>
+                </div>
+
+            </nav>
+        </header>
+
+        <!--==================== MAIN ====================-->
+        <main class="main">
+            <!--==================== HOME ====================-->
+            <section class="home section" id="home">
+                
+                <!-- WEBPAGE TITLE WITH H1 STYLE -->
+                <h1 id="webpage-title">James's Portfolio Website</h1>
+                
+                <div class="home__container container grid">
+                    <div class="home__content grid">
+                        <div class="home__social">
+                            <a href="https://www.linkedin.com/in/JamesBalagat/" target="_blank" class="home__social-icon">
+                                <i class="uil uil-linkedin-alt"></i>
+                            </a>
+
+                            <a href="https://github.com/Ninjabiboy" target="_blank" class="home__social-icon">
+                                <i class="uil uil-github-alt"></i>
+                            </a>
+
+                            <a href="https://www.facebook.com/GaMeRsaBaLaY" target="_blank" class="home__social-icon">
+                                <i class="uil uil-facebook-f"></i>
+                            </a>
+                        </div>
+
+                        <div class="home__img">
+                            <img src="assets/img/james.jpg" alt="Home_Image" style="border-radius: 10%;">
+                        </div>
+
+                        <div class="home__data">
+                            <h2 class="home__title">Hi, I'm James!</h2>
+                            <h3 class="home__subtitle">An Aspiring Software Developer</h3>
+                            <p class="home__description">Proficient in multiple programming languages, including Java and Python, with extensive experience in developing applications using Flutter.</p>
+                            <a href="#contact" class="button button--flex">
+                                Contact Me <i class="uil uil-message button__icon"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="home__scroll">
+                        <a href="#about" class="home__scroll-button button--flex">
+                            <i class="uil uil-mouse-alt home__scroll-mouse"></i>
+                            <span class="home__scroll-name">Scroll down</span>
+                            <i class="uil uil-arrow-down home__scroll-arrow"></i>
+                        </a>
+                    </div>
+                </div>
+            </section>
+
+            <!--==================== ABOUT ====================-->
+            <section class="about section" id="about">
+                <h2 class="section__title">About Me</h2>
+                <span class="section__subtitle">My introduction</span>
+
+                <div class="about__container container">
+                    <div class="about__data">
+                        <p class="about__description">
+                            As a tech enthusiast studying for a BS in Computer Science at the University of Mindanao, I am also a certified Microsoft Office Specialist. Beyond coding, I specialize in graphic and layout design for social media content and possess strong skills in photo, video, and music editing.
+                        </p>
+                        
+                        <div class="about__info">
+                            <div>
+                                <span class="about__info-title">2+</span>
+                                <span class="about__info-name">Years <br> of Experience</span>
+                            </div>
+
+                            <div>
+                                <span class="about__info-title">5+</span>
+                                <span class="about__info-name">Completed <br> Projects</span>
+                            </div>
+
+                        </div>
+
+                        <div class="about__buttons">
+                            <a download="" href="assets/pdf/James_Paul_Balagat_Resume.pdf" class="button button--flex">
+                                Download Resume<i class="uil uil-download-alt button__icon"></i>
+                            </a>
+                        </div>
+
+                    </div>
+                </div>
+            </section>
+
+            <!--==================== SKILLS ====================-->
+            <section class="skills section" id="skills">
+                <h2 class="section__title">Skills</h2>
+                <span class="section__subtitle">My technical level</span>
+
+                <div class="skills__container container">
+                    <div>
+                        <!--==================== SKILLS 1 ====================-->
+                        <div class="skills__content skills__open">
+                            <div class="skills__header">
+                                <i class="uil uil-brackets-curly skills__icon"></i>
+
+                                <div>
+                                    <h1 class="skills__title">Backend Development</h1>
+                                    <span class="skills__subtitle">More than 2 years<br>(with Competitive Programming)</span>
+                                </div>
+
+                                <i class="uil uil-angle-down skills__arrow"></i>
+                            </div>
+
+                            <div class="skills__list grid">
+                                <div class="skills__data">
+                                    <div class="skills__titles">
+                                        <h3 class="skills__name">Python</h3>
+                                        <span class="skills__number">Experienced</span>
+                                    </div>
+                                    <div class="skills__bar">
+                                        <span class="skills__percentage skills__python"></span>
+                                    </div>
+                                </div>
+
+                                <div class="skills__data">
+                                    <div class="skills__titles">
+                                        <h3 class="skills__name">Java</h3>
+                                        <span class="skills__number">Competent</span>
+                                    </div>
+                                    <div class="skills__bar">
+                                        <span class="skills__percentage skills__java"></span>
+                                    </div>
+                                </div>
+
+                                <div class="skills__data">
+                                    <div class="skills__titles">
+                                        <h3 class="skills__name">C#</h3>
+                                        <span class="skills__number">Novice</span>
+                                    </div>
+                                    <div class="skills__bar">
+                                        <span class="skills__percentage skills__csharp"></span>
+                                    </div>
+                                </div>
+                                <div class="skills__data">
+                                    <div class="skills__titles">
+                                        <h3 class="skills__name">Php</h3>
+                                        <span class="skills__number">Competent</span>
+                                    </div>
+                                    <div class="skills__bar">
+                                        <span class="skills__percentage skills__php"></span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!--==================== SKILLS 2 ====================-->
+                        <div class="skills__content skills__close">
+                            <div class="skills__header">
+                                <i class="uil uil-desktop skills__icon"></i>
+
+                                <div>
+                                    <h1 class="skills__title">Frontend Development</h1>
+                                    <span class="skills__subtitle">More than 2 years</span>
+                                </div>
+
+                                <i class="uil uil-angle-down skills__arrow"></i>
+                            </div>
+
+                            <div class = "skills__list grid">
+
+                                <div class="skills__data">
+                                    <div class="skills__titles">
+                                        <h3 class="skills__name">HTML</h3>
+                                        <span class="skills__number">Novice</span>
+                                    </div>
+                                    <div class="skills__bar">
+                                        <span class="skills__percentage skills__html"></span>
+                                    </div>
+                                </div>
+
+                                <div class="skills__data">
+                                    <div class="skills__titles">
+                                        <h3 class="skills__name">CSS</h3>
+                                        <span class="skills__number">Novice</span>
+                                    </div>
+                                    <div class="skills__bar">
+                                        <span class="skills__percentage skills__css"></span>
+                                    </div>
+                                </div>
+
+                                <div class="skills__data">
+                                    <div class="skills__titles">
+                                        <h3 class="skills__name">JS</h3>
+                                        <span class="skills__number">Novice</span>
+                                    </div>
+                                    <div class="skills__bar">
+                                        <span class="skills__percentage skills__js"></span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!--==================== SKILLS 3 ====================-->
+                        <div class="skills__content skills__close">
+                            <div class="skills__header">
+                                <i class="uil uil-object-group skills__icon"></i>
+
+                                <div>
+                                    <h1 class="skills__title">Graphic/Layout Design</h1>
+                                    <span class="skills__subtitle">More than 5 years</span>
+                                </div>
+
+                                <i class="uil uil-angle-down skills__arrow"></i>
+                            </div>
+
+                            <div class = "skills__list grid">
+                                <div class="skills__data">
+                                    <div class="skills__titles">
+                                        <h3 class="skills__name">Canva</h3>
+                                        <span class="skills__number">Experienced</span>
+                                    </div>
+                                    <div class="skills__bar">
+                                        <span class="skills__percentage skills__canva"></span>
+                                    </div>
+                                </div>
+
+                                <div class="skills__data">
+                                    <div class="skills__titles">
+                                        <h3 class="skills__name">Adobe Illustrator</h3>
+                                        <span class="skills__number">Competent</span>
+                                    </div>
+                                    <div class="skills__bar">
+                                        <span class="skills__percentage skills__illustrator"></span>
+                                    </div>
+                                </div>
+
+                                <div class="skills__data">
+                                    <div class="skills__titles">
+                                        <h3 class="skills__name">Adobe Photoshop</h3>
+                                        <span class="skills__number">Competent</span>
+                                    </div>
+                                    <div class="skills__bar">
+                                        <span class="skills__percentage skills__photoshop"></span>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                        <!--==================== SKILLS 4 ====================-->
+                        <div class="skills__content skills__close">
+                            <div class="skills__header">
+                                <i class="uil uil-video skills__icon"></i>
+
+                                <div>
+                                    <h1 class="skills__title">Video Editing</h1>
+                                    <span class="skills__subtitle">More than 3 years</span>
+                                </div>
+
+                                <i class="uil uil-angle-down skills__arrow"></i>
+                            </div>
+
+                            <div class = "skills__list grid">
+                                <div class="skills__data">
+                                    <div class="skills__titles">
+                                        <h3 class="skills__name">Wondershare Filmora</h3>
+                                        <span class="skills__number">Experienced</span>
+                                    </div>
+                                    <div class="skills__bar">
+                                        <span class="skills__percentage skills__wsf"></span>
+                                    </div>
+                                </div>
+
+                                <div class="skills__data">
+                                    <div class="skills__titles">
+                                        <h3 class="skills__name">Adobe Premiere Pro</h3>
+                                        <span class="skills__number">Competent</span>
+                                    </div>
+                                    <div class="skills__bar">
+                                        <span class="skills__percentage skills__pr"></span>
+                                    </div>
+                                </div>
+
+                                <div class="skills__data">
+                                    <div class="skills__titles">
+                                        <h3 class="skills__name">Adobe After Effects</h3>
+                                        <span class="skills__number">Novice</span>
+                                    </div>
+                                    <div class="skills__bar">
+                                        <span class="skills__percentage skills__ae"></span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="skills__content skills__close">
+                            <div class="skills__header">
+                                <i class="uil uil-mobile-android skills__icon"></i>
+
+                                <div>
+                                    <h1 class="skills__title">Mobile Development</h1>
+                                    <span class="skills__subtitle">More than a year</span>
+                                </div>
+
+                                <i class="uil uil-angle-down skills__arrow"></i>
+                            </div>
+
+                            <div class = "skills__list grid">
+                                <div class="skills__data">
+                                    <div class="skills__titles">
+                                        <h3 class="skills__name">Android Studio</h3>
+                                        <span class="skills__number">Competent</span>
+                                    </div>
+                                    <div class="skills__bar">
+                                        <span class="skills__percentage skills__android"></span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </section>
+
+            <!--==================== PORTFOLIO ====================-->
+            <section class="portfolio section" id = "portfolio">
+                <h2 class="section__title">Portfolio</h2>
+                <span class="section__subtitle">My recent work</span>
+                
+                <!--
+                <div class="portfolio__temp">
+                    <i class="uil uil-traffic-barrier portfolio__icon"></i>
+                    <h3 class="portfolio__title">Coming Soon</h1>
+                </div>
+                -->
+                
+                <div class="portfolio__container container swiper">
+                    <div class = "swiper-wrapper">
+                        
+                        <!--==================== PORTFOLIO 7 ====================-->
+                        <div class="portfolio__content grid swiper-slide">
+                            <img src="assets/img/Picture5.png" alt="" class="portfolio__img">
+                            
+                            <div class="portfolio__data">
+                                <h3 class="portfolio__title">Water Refilling Station System</h3>
+                                <p class="portfolio__description">
+                                    A comprehensive website for a water refilling station system, streamlining customer orders, tracking deliveries, and managing inventory efficiently.
+                                </p>
+                                <a href="https://github.com/Ninjabiboy/adelforstation" target="_blank" class="button button--flex button--small portfolio__button">
+                                    Source code
+                                    <i class="uil uil-arrow-right button__icon"></i>
+                                </a>
+                            </div>
+                        </div>
+
+                        <!--==================== PORTFOLIO 6 ====================-->
+                        <div class="portfolio__content grid swiper-slide">
+                            <img src="assets/img/qq.gif" alt="" class="portfolio__img">
+                            
+                            <div class="portfolio__data">
+                                <h3 class="portfolio__title">Ebook Mobile Application</h3>
+                                <p class="portfolio__description">
+                                    Quest Quill offers users a seamless reading experience with customizable features and an intuitive interface.
+                                </p>
+                                <a href="https://github.com/Ninjabiboy/Flutter-Book-App-Latest" target="_blank" class="button button--flex button--small portfolio__button">
+                                    Source code
+                                    <i class="uil uil-arrow-right button__icon"></i>
+                                </a>
+                            </div>
+                        </div>
+
+                        <!--==================== PORTFOLIO 5 ====================-->
+                        <div class="portfolio__content grid swiper-slide">
+                            <img src="assets/img/hotel.gif" alt="" class="portfolio__img">
+                            
+                            <div class="portfolio__data">
+                                <h3 class="portfolio__title">Hotel Booking System</h3>
+                                <p class="portfolio__description">
+                                    The Hotel Booking System 
+                                    aims to automate the process of removing, updating, and adding customers and allows to manually booking a room for them. 
+                                </p>
+                                <a href="https://github.com/Ninjabiboy/Hotel-Booking-SQL" target="_blank" class="button button--flex button--small portfolio__button">
+                                    Source code
+                                    <i class="uil uil-arrow-right button__icon"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Add Pagination -->
+                    <div class="swiper-pagination"></div>
+                    
+                    <!-- Add Arrows -->
+                    <div class="swiper-button-next">
+                        <i class="uil uil-angle-right-b swiper-portfolio-icon"></i>
+                    </div>
+                    <div class="swiper-button-prev">
+                        <i class="uil uil-angle-left-b swiper-portfolio-icon"></i>
+                    </div>
+                </div>
+                
+            </section>
+    
+
+            <!--==================== CONTACT ME ====================-->
+            <section class="contact section" id="contact">
+                <h2 class="section__title">Contact Me</h2>
+                <span class="section__subtitle">Get in touch</span>
+
+                <div class="contact__container container grid">
+                    <div>
+                        <div class="contact__information">
+                            <i class="uil uil-envelope contact__icon"></i>
+
+                            <div>
+                                <h3 class="contact__title">Email</h3>
+                                <span class="contact__subtitle">paul.s.balagat@gmail.com</span>
+                            </div>
+                        </div>
+
+                        <div class="contact__information">
+                            <i class="uil uil-map-marker contact__icon"></i>
+
+                            <div>
+                                <h3 class="contact__title">Location</h3>
+                                <span class="contact__subtitle">Buhangin, Davao City, Philippines</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <!--==================== FOOTER ====================-->
+        <footer class="footer">
+            <div class="footer__bg">
+                <div class="footer__container container grid">
+                    <div>
+                        <h1 class="footer__title">James</h1>
+                        <span class="footer__subtitle">Software Developer</span>
+                    </div>
+
+                    <div class="footer__socials">
+                        <a href="https://www.facebook.com/GaMeRsaBaLaY" target="_blank" class="footer__social">
+                            <i class="uil uil-facebook-f"></i>
+                        </a>
+                    
+                        <a href="https://www.linkedin.com/in/JamesBalagat/" target="_blank" class="footer__social">
+                            <i class="uil uil-linkedin"></i>
+                        </a>
+                    </div>
+        </footer>
+        
+        <!--==================== SCROLL TOP ====================-->
+        <a href="" class="scrollup" id="scroll-up">
+            <i class="uil uil-arrow-up scrollup__icon"></i>
+        </a>
+
+        <!--==================== SWIPER JS ====================-->
+        <script src="assets/js/swiper-bundle.min.js"></script>
+
+        <!--==================== MAIN JS ====================-->
+        <script src="assets/js/main.js"></script>
+    </body>
+</html>
