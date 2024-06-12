@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;900&family=Noto+Sans+Syriac+Eastern:wght@100..900&family=Poppins:wght@600&display=swap');
 
 :root {
     --header-height: 3rem;
@@ -19,7 +19,7 @@
     --scroll-bar-color: hsl(var(--hue-color), 12%, 90%);
     --scroll-thumb-color: hsl(var(--hue-color), 12%, 80%);
 
-    --body-font: 'Poppins', sans-serif;
+    --body-font: "Noto Sans Syriac Eastern", sans-serif;
 
     --big-font-size: 2rem;
     --h1-font-size: 1.5rem;
@@ -311,6 +311,7 @@ img {
 .home__description{
   margin-bottom: var(--mb-2);
 }
+
 
 .home__scroll{
   display: none;
@@ -866,3 +867,4 @@ img {
     bottom: -4.5rem;
   }
 }
+
