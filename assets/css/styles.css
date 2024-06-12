@@ -171,7 +171,7 @@ img {
   bottom: 0;
   left: 0;
   z-index: var(--z-fixed);
-  background-color: var(--first-color);
+  background-color: white;
 }
 
 .nav{
@@ -224,7 +224,7 @@ img {
   display: flex;
   flex-direction: column;
   align-items: center;
-  font-size: var(--small-font-size);
+  font-size: var(--normal-font-size);
   color: var(--title-color);
   font-weight: var(--font-medium);
 }
@@ -343,15 +343,14 @@ img {
 
 .button{
   display: inline-block;
-  background-color: var(--first-color);
-  color: #FFF;
-  padding: 1rem;
+  color: var(--first-color);
+  padding: 0.8rem;
   border-radius: .5rem;
   font-weight: var(--font-medium);
 }
 
 .button:hover{
-  background-color: var(--first-color-alt);
+  background-color: gainsboro;
 }
 
 .button__icon{
@@ -616,6 +615,11 @@ img {
   color: var(--text-color-light);
 }
 
+.link__email{
+  color:var(--text-color-light);
+}
+
+
 .footer{
   text-align: center;
   padding-top: 5rem;
@@ -687,20 +691,6 @@ img {
   bottom: 5rem;
 }
 
-::-webkit-scrollbar{
-  width: .60rem;
-  background-color: var(--scroll-bar-color);
-  border-radius: .5rem;
-}
-
-::-webkit-scrollbar-thumb{
-  background-color: var(--scroll-thumb-color);
-  border-radius: .5rem;
-}
-
-::-webkit-scrollbar-thumb:hover{
-  background-color: var(--text-color-light);
-}
 
 @media screen and (max-width: 350px){
   .container{
@@ -744,7 +734,11 @@ img {
 
   .about__container,
   .skills__container,
-  .portfolio__content,
+  .portfolio__content{
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  
   .contact__container{
     grid-template-columns: repeat(2, 1fr);
   }
@@ -767,6 +761,7 @@ img {
 
   .section{
     padding: 6rem 0 2rem;
+    margin-bottom: 150px;
   }
 
   .section__subtitle{
