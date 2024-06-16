@@ -135,10 +135,11 @@ if (selectedTheme) {
     document.body.classList[selectedTheme === 'dark' ? 'add' : 'remove'](darkTheme);
     themeButton.classList[selectedIcon === 'uil-moon' ? 'add' : 'remove'](iconTheme);
   } else {
-    // Default to dark mode
+    // Explicitly set dark mode as default if no theme is found in localStorage
+    localStorage.setItem('selected-theme', 'dark');
+    localStorage.setItem('selected-icon', 'uil-moon');
     document.body.classList.add(darkTheme);
     themeButton.classList.add(iconTheme);
-    // No need to set localStorage here as it will be set when the user toggles the theme
   }
   
   // Add event listener to the theme button to toggle themes
