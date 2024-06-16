@@ -292,7 +292,7 @@ img {
 }
 
 .home__title{
-  margin-top: 18rem;
+  margin-top: 20rem;
   font-size: var(--big-font-size);
 }
 
@@ -310,7 +310,7 @@ img {
 
 
 .home__scroll{
-  margin-bottom: 19rem;
+  margin-bottom: 20rem;
   display: none;
 }
 
