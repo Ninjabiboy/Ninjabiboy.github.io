@@ -158,30 +158,22 @@ const themeButton = document.getElementById('theme-button');
 const darkTheme = 'dark-theme';
 const iconTheme = 'uil-sun';
 
-// Attempt to retrieve the user's previously selected theme and icon
-const selectedTheme = localStorage.getItem('selected-theme');
-const selectedIcon = localStorage.getItem('selected-icon');
-
 // Functions to get the current theme and icon
 const getCurrentTheme = () => document.body.classList.contains(darkTheme) ? 'dark' : 'light';
 const getCurrentIcon = () => themeButton.classList.contains(iconTheme) ? 'uil-moon' : 'uil-sun';
 
-// Apply the user's previously selected theme and icon if available
-if (selectedTheme) {
-    document.body.classList[selectedTheme === 'dark' ? 'add' : 'remove'](darkTheme);
-    themeButton.classList[selectedIcon === 'uil-moon' ? 'add' : 'remove'](iconTheme);
-  } else {
-    // Explicitly set dark mode as default if no theme is found in localStorage
-    localStorage.setItem('selected-theme', 'dark');
-    localStorage.setItem('selected-icon', 'uil-moon');
-    document.body.classList.add(darkTheme);
-    themeButton.classList.add(iconTheme);
-  }
-  
-  // Add event listener to the theme button to toggle themes
-  themeButton.addEventListener('click', () => {
-    document.body.classList.toggle(darkTheme);
-    themeButton.classList.toggle(iconTheme);
-    localStorage.setItem('selected-theme', getCurrentTheme());
-    localStorage.setItem('selected-icon', getCurrentIcon());
-  });
+// Set dark mode as the default
+document.body.classList.add(darkTheme);
+themeButton.classList.add(iconTheme);
+
+// Update localStorage with the default theme and icon
+localStorage.setItem('selected-theme', 'dark');
+localStorage.setItem('selected-icon', 'uil-moon');
+
+// Add event listener to the theme button to toggle themes
+themeButton.addEventListener('click', () => {
+  document.body.classList.toggle(darkTheme);
+  themeButton.classList.toggle(iconTheme);
+  localStorage.setItem('selected-theme', getCurrentTheme());
+  localStorage.setItem('selected-icon', getCurrentIcon());
+});
