@@ -1,21 +1,42 @@
 const navMenu = document.getElementById('nav-menu'),
-      navToggle = document.getElementById('nav-toggle'),
-      navClose = document.getElementById('nav-close')
-
+    navToggle = document.getElementById('nav-toggle'),
+    navClose = document.getElementById('nav-close')
 
 if(navToggle){
     navToggle.addEventListener('click', () =>{
-        navMenu.classList.add('show-menu')
+      navMenu.classList.toggle('show-menu')
     })
 }
-
 
 if(navClose){
     navClose.addEventListener('click', () =>{
-        navMenu.classList.remove('show-menu')
+      navMenu.classList.remove('show-menu')
     })
 }
+document.addEventListener('DOMContentLoaded', () => {
+    // Select all navigation links
+    const navLinks = document.querySelectorAll('.nav__link');
 
+    navLinks.forEach(link => {
+        link.addEventListener('click', function(e) {
+            e.preventDefault(); // Prevent default anchor click behavior
+
+            const targetId = this.getAttribute('href').substring(1); // Extract the target ID (without #)
+            const targetElement = document.getElementById(targetId);
+
+            if (targetElement) {
+                // Calculate the position to scroll to accounting for a fixed header (e.g., 60px)
+                const offsetTop = targetElement.offsetTop - 60; // Adjust the 60px offset as needed
+
+                // Smoothly scroll to the target position
+                window.scrollTo({
+                    top: offsetTop,
+                    behavior: "smooth"
+                });
+            }
+        });
+    });
+});
 
 const navLink = document.querySelectorAll('.nav__link')
 
@@ -117,6 +138,21 @@ function scrollUp(){
 }
 window.addEventListener('scroll', scrollUp)
 
+
+document.addEventListener('DOMContentLoaded', (event) => {
+    const learnMoreButton = document.querySelector('.home__scroll-button');
+    const moreContent = document.getElementById('more-content');
+
+    learnMoreButton.addEventListener('click', function() {
+        if (moreContent.classList.contains('hidden')) {
+            moreContent.classList.remove('hidden');
+            moreContent.classList.add('visible');
+        } else {
+            moreContent.classList.remove('visible');
+            moreContent.classList.add('hidden');
+        }
+    });
+});
 
 const themeButton = document.getElementById('theme-button');
 const darkTheme = 'dark-theme';
