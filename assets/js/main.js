@@ -25,7 +25,7 @@ document.addEventListener('DOMContentLoaded', () => {
             const targetElement = document.getElementById(targetId);
 
             if (targetElement) {
-                const offsetTop = targetElement.offsetTop - 60; 
+                const offsetTop = targetElement.offsetTop - 50; 
 
                 window.scrollTo({
                     top: offsetTop,
@@ -98,18 +98,6 @@ tabs.forEach(tab => {
     })
 })
 
-document.addEventListener('DOMContentLoaded', () => {
-    const likeButton = document.getElementById('like-button');
-    const likeCounter = document.getElementById('like-counter');
-    let count = 0;
-
-    likeButton.addEventListener('click', () => {
-        count++;
-        likeCounter.textContent = count;
-    });
-});
-
-
 const swiper = new Swiper('.swiper', {
   cssMode: true,
   direction: 'horizontal',
@@ -126,22 +114,25 @@ const swiper = new Swiper('.swiper', {
   },
 });
 
-const sections = document.querySelectorAll('section[id]')
+const sections = document.querySelectorAll('section[id]');
 
-function scrollActive(){
-    const scrollY = window.pageYOffset
+function scrollActive() {
+    const scrollY = window.pageYOffset;
 
-    sections.forEach(current =>{
-        const sectionHeight = current.offsetHeight
+    sections.forEach(current => {
+        const sectionHeight = current.offsetHeight;
         const sectionTop = current.offsetTop - 50;
-        sectionId = current.getAttribute('id')
+        const sectionId = current.getAttribute('id'); // Use const to declare sectionId
 
-        if(scrollY > sectionTop && scrollY <= sectionTop + sectionHeight){
-            document.querySelector('.nav__menu a[href*=' + sectionId + ']').classList.add('active-link')
-        } else {
-            document.querySelector('.nav__menu a[href*=' + sectionId + ']').classList.remove('active-link')
+        const link = document.querySelector('.nav__menu a[href*="' + sectionId + '"]'); // Cache the query result
+        if (link) { // Check if the element exists
+            if (scrollY > sectionTop && scrollY <= sectionTop + sectionHeight) {
+                link.classList.add('active-link');
+            } else {
+                link.classList.remove('active-link');
+            }
         }
-    })
+    });
 }
 window.addEventListener('scroll', scrollActive)
 

@@ -192,6 +192,7 @@ img {
   border-color: var(--first-color);
 }
 
+
 .timeline {
   width: 80%;
   max-width: 900px;
@@ -413,7 +414,7 @@ img {
 }
 
 .home__title{
-  margin-top: 20rem;
+  margin-top: 15rem;
   font-size: var(--big-font-size);
 }
 
@@ -804,23 +805,6 @@ img {
   justify-self: center;
   margin: auto; 
   display: block;
-}
-
-.like-section {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  margin-top: 20px;
-}
-
-.like-button {
-  padding: 10px 15px;
-  font-size: 16px;
-  cursor: pointer;
-}
-
-.like-counter {
-  font-size: 16px;
 }
 
 .portfolio__description{
