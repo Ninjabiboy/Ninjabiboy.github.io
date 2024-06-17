@@ -98,6 +98,17 @@ tabs.forEach(tab => {
     })
 })
 
+document.addEventListener('DOMContentLoaded', () => {
+    const likeButton = document.getElementById('like-button');
+    const likeCounter = document.getElementById('like-counter');
+    let count = 0;
+
+    likeButton.addEventListener('click', () => {
+        count++;
+        likeCounter.textContent = count;
+    });
+});
+
 
 const swiper = new Swiper('.swiper', {
   cssMode: true,

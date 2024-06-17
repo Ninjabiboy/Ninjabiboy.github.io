@@ -14,7 +14,7 @@
     <body>
         <header class="header" id="header">
             <nav class="nav container">
-                <a href="#" class="nav__logo" ><img class="nav__lg" src="/assets/img/uil--user.png" width="18px" height="18px" style="margin-right: 10px;" />James</a>
+                <a href="" class="nav__logo" ><img class="nav__lg" src="/assets/img/uil--user.png" width="18px" height="18px" style="margin-right: 10px;" />James</a>
                 
                 <div class="nav__menu" id="nav-menu">
                     <ul class="nav__list grid">
@@ -34,15 +34,16 @@
                             </a>
                         </li>
                         <li class="nav__item">
-                            <a href="#skills" class="nav__link">
-                                <i class="uil uil-file-alt nav__icon"></i>Skills
-                            </a>
-                        </li>
-                        <li class="nav__item">
                             <a href="#portfolio" class="nav__link">
                                 <i class="uil uil-scenery nav__icon"></i>Projects
                             </a>
                         </li>
+                        <li class="nav__item">
+                            <a href="#skills" class="nav__link">
+                                <i class="uil uil-file-alt nav__icon"></i>Skills
+                            </a>
+                        </li>
+
                         <li class="nav__item">
                             <a href="#contact" class="nav__link">
                                 <i class="uil uil-message nav__icon"></i>Contact
@@ -64,11 +65,11 @@
 
         <main class="main">
             <section class="home section" id="home">
-                
+                <div class="home__container container">
                 <div class="home__container container">
                     <div class="home__content ">
                         <div class="home__data">
-                            <h2 class="home__title">Hi, I'm <span class="home__titles">James</span></h2><br> <!--Test File-->
+                            <h2 class="home__title">Hi, I'm <span class="home__titles">James Balagat</span></h2><br> <!--Test File-->
                             <span class="home__subtitle" id="dynamicSubtitle">An Aspiring Software Developer</span>
                             <p class="home__description">Competent in multiple programming languages, including Java and Python, with extensive experience in developing applications using android studio.</p>
                         </div>
@@ -83,6 +84,10 @@
                        <a href="https://github.com/Ninjabiboy" target="_blank" class="home__social-icon">
                            <img src="https://skillicons.dev/icons?i=github"/>
                        </a>
+
+                       <a href="https://www.facebook.com/GaMeRsaBaLaY" target="_blank" class="home__social-icon">
+                        <img src="https://raw.githubusercontent.com/maurodesouza/profile-readme-generator/master/src/assets/icons/social/facebook/default.svg" alt="facebook logo" width="45px" height="45px"/>
+                    </a>
                    </div>
 
                     <div class="home__scroll">
@@ -94,7 +99,7 @@
                     </div>
                 </div>
             </section>
-
+            
             <section class="about section" id="about">
                     <h2 class="section__title">About Me</h2>
                     <span class="section__subtitle">Who am I</span>
@@ -104,13 +109,13 @@
                     <div class="about__container container">
                         <div class="about__data">
                             <p class="about__description">
-                                Hi, my name is james and I am a tech enthusiast studying for a Bachelor of Science in Computer Science degree at the University of Mindanao. I am also a freelance virtual assistant. My skills when it comes to programming, are basic HTML, CSS, Javascript, Python, and others. Beyond coding, I am also proficient in graphic and layout design for digital marketing content and possess strong skills in photo and video editing.
+                                I am a tech enthusiast studying for a Bachelor of Science in Computer Science degree at the University of Mindanao. I am also a freelance virtual assistant. My skills when it comes to programming, are basic HTML, CSS, Javascript, Python, and others. Beyond coding, I am also proficient in graphic and layout design for digital marketing content and possess strong skills in photo and video editing.
                             </p>
                             
                             <div class="about__info">
                                 <div>
                                     <span class="about__info-title">2+</span>
-                                    <span class="about__info-name">Years <br> of Experience</span>
+                                    <span class="about__info-name">Years<br>of Experience</span>
                                 </div>
 
                                 <div>
@@ -189,6 +194,87 @@
 
                     <div class="swiper-pagination"></div>
                     
+                    <div class="swiper-button-next">
+                        <i class="uil uil-arrow-right swiper-portfolio-icon"></i>
+                    </div>
+                    <div class="swiper-button-prev">
+                        <i class="uil uil-arrow-left swiper-portfolio-icon"></i>
+                    </div>
+                </div>
+                
+            </section>
+
+            <section class="portfolio section" id = "portfolio">
+                <h2 class="section__title">Projects</h2>
+                <span class="section__subtitle">My recent endeavors</span>
+                
+                <div class="portfolio__container container swiper">
+                    <div class = "swiper-wrapper">
+                        
+                        <div class="portfolio__content swiper-slide">
+                            <img src="assets/img/Picture5.png" alt="" class="portfolio__img">
+                            <br>
+                            <div class="portfolio__data">
+                                <h3 class="portfolio__title">Water Refilling Station System</h3>
+                                <p class="portfolio__description">
+                                    A comprehensive website for a water refilling station system, streamlining customer orders, tracking deliveries, and managing inventory efficiently.
+                                </p>
+                                <a href="https://github.com/Ninjabiboy/adelforstation" target="_blank" class="button button--flex button--small portfolio__button">
+                                    GitHub
+                                    <i class="uil uil-arrow-right button__icon"></i>
+                                </a>
+                            </div>
+                        </div>
+
+                        <div class="portfolio__content swiper-slide">
+                            <img src="assets/img/fg.gif" alt="" class="portfolio__img">
+                            <br>
+                            <div class="portfolio__data">
+                                <h3 class="portfolio__title">Senior Grocery</h3>
+                                <p class="portfolio__description">
+                                    A grocery shopping app that is tailored for senior citizens which has many extensive features to enable them to be easily accessible. Made using Figma.
+                                </p>
+                                <a href="https://www.figma.com/design/5rKzFXwo2PJBucgcLxxV9w/Grocery-Shopping-App-(Community)?node-id=705-1838&t=IUUmUNrnT7UnlzWf-1" target="_blank" class="button button--flex button--small portfolio__button">
+                                    Figma
+                                    <i class="uil uil-arrow-right button__icon"></i>
+                                </a>
+                            </div>
+                        </div>
+
+                        <div class="portfolio__content swiper-slide">
+                            <img src="assets/img/qq.gif" alt="" class="portfolio__img">
+                            <br>
+                            <div class="portfolio__data">
+                                <h3 class="portfolio__title">Ebook Mobile Application</h3>
+                                <p class="portfolio__description">
+                                    Quest Quill offers users a seamless reading experience with customizable features and an intuitive interface.
+                                </p>
+                                <a href="https://github.com/Ninjabiboy/Flutter-Book-App-Latest" target="_blank" class="button button--flex button--small portfolio__button">
+                                    GitHub
+                                    <i class="uil uil-arrow-right button__icon"></i>
+                                </a>
+                            </div>
+                        </div>
+
+                        <div class="portfolio__content swiper-slide">
+                            <img src="assets/img/hotel.gif" alt="" class="portfolio__img">
+                            <br>
+                            <div class="portfolio__data">
+                                <h3 class="portfolio__title">Hotel Booking System</h3>
+                                <p class="portfolio__description">
+                                    The Hotel Booking System 
+                                    aims to automate the process of removing, updating, and adding customers and allows to manually booking a room for them. 
+                                </p>
+                                <a href="https://github.com/Ninjabiboy/Hotel-Booking-SQL" target="_blank" class="button button--flex button--small portfolio__button">
+                                    GitHub
+                                    <i class="uil uil-arrow-right button__icon"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="swiper-pagination"></div>
+
                     <div class="swiper-button-next">
                         <i class="uil uil-arrow-right swiper-portfolio-icon"></i>
                     </div>
@@ -346,7 +432,7 @@
                                 <div class="skills__data">
                                     <div class="skills__titles">
                                         <h3 class="skills__name">Canva</h3>
-                                        <span class="skills__number">Experienced</span>
+                                        <span class="skills__number">Expert</span>
                                     </div>
                                     <div class="skills__bar">
                                         <span class="skills__percentage skills__canva"></span>
@@ -402,7 +488,7 @@
                                 <div class="skills__data">
                                     <div class="skills__titles">
                                         <h3 class="skills__name">Wondershare Filmora</h3>
-                                        <span class="skills__number">Experienced</span>
+                                        <span class="skills__number">Expert</span>
                                     </div>
                                     <div class="skills__bar">
                                         <span class="skills__percentage skills__wsf"></span>
@@ -435,110 +521,42 @@
                 </div>
             </section>
 
-            <section class="portfolio section" id = "portfolio">
-                <h2 class="section__title">Projects</h2>
-                <span class="section__subtitle">My recent endeavors</span>
-                
-                <div class="portfolio__container container swiper">
-                    <div class = "swiper-wrapper">
-                        
-                        <div class="portfolio__content grid swiper-slide">
-                            <img src="assets/img/Picture5.png" alt="" class="portfolio__img">
-                            
-                            <div class="portfolio__data">
-                                <h3 class="portfolio__title">Water Refilling Station System</h3>
-                                <p class="portfolio__description">
-                                    A comprehensive website for a water refilling station system, streamlining customer orders, tracking deliveries, and managing inventory efficiently.
-                                </p>
-                                <a href="https://github.com/Ninjabiboy/adelforstation" target="_blank" class="button button--flex button--small portfolio__button">
-                                    GitHub
-                                    <i class="uil uil-arrow-right button__icon"></i>
-                                </a>
-                            </div>
-                        </div>
-
-                        <div class="portfolio__content grid swiper-slide">
-                            <img src="assets/img/fg.gif" alt="" class="portfolio__img">
-                            
-                            <div class="portfolio__data">
-                                <h3 class="portfolio__title">Senior Grocery App</h3>
-                                <p class="portfolio__description">
-                                    A grocery shopping app that is tailored for senior citizens which has many extensive features to enable them to be easily accessible. Made using Figma.
-                                </p>
-                                <a href="https://www.figma.com/design/5rKzFXwo2PJBucgcLxxV9w/Grocery-Shopping-App-(Community)?node-id=705-1838&t=IUUmUNrnT7UnlzWf-1" target="_blank" class="button button--flex button--small portfolio__button">
-                                    GitHub
-                                    <i class="uil uil-arrow-right button__icon"></i>
-                                </a>
-                            </div>
-                        </div>
-
-                        <div class="portfolio__content grid swiper-slide">
-                            <img src="assets/img/qq.gif" alt="" class="portfolio__img">
-                            
-                            <div class="portfolio__data">
-                                <h3 class="portfolio__title">Ebook Mobile Application</h3>
-                                <p class="portfolio__description">
-                                    Quest Quill offers users a seamless reading experience with customizable features and an intuitive interface.
-                                </p>
-                                <a href="https://github.com/Ninjabiboy/Flutter-Book-App-Latest" target="_blank" class="button button--flex button--small portfolio__button">
-                                    GitHub
-                                    <i class="uil uil-arrow-right button__icon"></i>
-                                </a>
-                            </div>
-                        </div>
-
-                        <div class="portfolio__content grid swiper-slide">
-                            <img src="assets/img/hotel.gif" alt="" class="portfolio__img">
-                            
-                            <div class="portfolio__data">
-                                <h3 class="portfolio__title">Hotel Booking System</h3>
-                                <p class="portfolio__description">
-                                    The Hotel Booking System 
-                                    aims to automate the process of removing, updating, and adding customers and allows to manually booking a room for them. 
-                                </p>
-                                <a href="https://github.com/Ninjabiboy/Hotel-Booking-SQL" target="_blank" class="button button--flex button--small portfolio__button">
-                                    GitHub
-                                    <i class="uil uil-arrow-right button__icon"></i>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="swiper-pagination"></div>
-
-                    <div class="swiper-button-next">
-                        <i class="uil uil-arrow-right swiper-portfolio-icon"></i>
-                    </div>
-                    <div class="swiper-button-prev">
-                        <i class="uil uil-arrow-left swiper-portfolio-icon"></i>
-                    </div>
-                </div>
-                
-            </section>
+           
 
             <section class="contact section" id="contact">
                 <h2 class="section__title">Contact Me</h2>
-                <span class="section__subtitle">Reach out</span>
+                <span class="section__subtitle"></span>
 
                 <div class="contact__container container grid">
                     <div class="contact__information">
-                        <i class="uil uil-envelope contact__icon"></i>
+                        <i class="contact__icon"><img src="assets/img/adress.png" width="40px" height="40px"/></i>
                         <div class="email">
-                            <h3 class="contact__title">Email</h3>
-                            <span class="contact__subtitle"><a class="link__email" href="mailto:paul.s.balagat@gmail.com">paul.s.balagat@gmail.com</a></span>
+                            <h3 class="contact__title">Mail</h3>
+                            <span class="contact__subtitle"><a class="link__email" href="mailto:paul.s.balagat@gmail.com" style="text-decoration: underline;">paul.s.balagat@gmail.com</a></span>
                         </div>
                     </div>
                     <div class="contact__information">
-                        <i class="uil uil-phone contact__icon"></i>
+                        <i class="contact__icon"><img src="assets/img/telephone.png" width="40px" height="40px"/></i>
                         <div>
                             <h3 class="contact__title">Phone</h3>
                             <span class="contact__subtitle">+63 908 534 3943</span>
                         </div>
                     </div>
+                    <div class="contact__information">
+                        <i class="contact__icon"><img src="assets/img/map.png" width="40px" height="40px"/></i>
+                        <div>
+                            <h3 class="contact__title">Location</h3>
+                            <span class="contact__subtitle">Davao City, Philippines</span>
+                        </div>
                 </div>
+                <div class="contact__information">
+                    <i class="contact__icon"><img src="assets/img/mobile-phone.png" width="40px" height="40px"/></i>
+                    <div>
+                        <h3 class="contact__title">Mobile</h3>
+                        <span class="contact__subtitle">+63 994 227 6557</span>
+                    </div>
             </section>
-            </section>
-            </section>
+        </section>    
         </main>
 
         <footer class="footer">
@@ -546,34 +564,34 @@
                 <div class="footer__container container grid">
                     <div>
                         <h1 class="footer__title">Social Media</h1>
-                        <span class="footer__subtitle" >Find me here</span>
+                        <span class="footer__subtitle" >Learn more about me here!</span>
                     </div>
 
                     <div class="footer__socials">
                         <a href="https://github.com/Ninjabiboy" target="_blank" class="footer__social">
-                            <i class="uil uil-github"></i>
+                            <img src="https://skillicons.dev/icons?i=github" width="35px" height="35px" alt="github logo"  />
                         </a>
 
                         <a href="https://www.facebook.com/GaMeRsaBaLaY" target="_blank" class="footer__social">
-                            <i class="uil uil-facebook-f" ></i>
+                            <img src="https://raw.githubusercontent.com/maurodesouza/profile-readme-generator/master/src/assets/icons/social/facebook/default.svg" alt="facebook logo" width="35px" height="35px"/>
                         </a>
                     
                         <a href="https://www.linkedin.com/in/JamesBalagat/" target="_blank" class="footer__social">
-                            <i class="uil uil-linkedin"></i>
+                            <img src="https://raw.githubusercontent.com/maurodesouza/profile-readme-generator/master/src/assets/icons/social/linkedin/default.svg" width="35px" height="35px" alt="linkedin logo"  />
                         </a>
 
                         <a href="https://x.com/Ninja_JPSB" target="_blank" class="footer__social">
-                            <i class="uil uil-twitter"></i>
+                            <img src="https://raw.githubusercontent.com/maurodesouza/profile-readme-generator/master/src/assets/icons/social/twitter/default.svg" width="35px" height="35px" alt="twitter logo"  />
                         </a>
                         <a href="https://www.instagram.com/ninjabiboy/?hl=en" target="_blank" class="footer__social">
-                            <i class="uil uil-instagram"></i>
+                            <img src="https://raw.githubusercontent.com/maurodesouza/profile-readme-generator/master/src/assets/icons/social/instagram/default.svg" width="35px" height="35px" alt="instagram logo"  />
                         </a>
                     </div>
                 </div>
             </div>
         </footer>
 
-        <a href="" class="scrollup" id="scroll-up">
+        <a href="#home" class="scrollup" id="scroll-up">
             <i class="uil uil-angle-double-up scrollup__icon"></i>
         </a>
 
