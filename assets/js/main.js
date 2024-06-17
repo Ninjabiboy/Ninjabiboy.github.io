@@ -38,6 +38,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 });
 
+
 const navLink = document.querySelectorAll('.nav__link')
 
 function linkAction(){
@@ -47,26 +48,37 @@ function linkAction(){
 navLink.forEach(n => n.addEventListener('click', linkAction))
 
 
-const skillsContent = document.getElementsByClassName('skills__content'),
-      skillsHeader = document.querySelectorAll('.skills__header')
+const skillsContent = document.getElementsByClassName('skills__content');
+const skillsHeader = document.querySelectorAll('.skills__header');
 
-function toggleSkills(){
-    let itemClass = this.parentNode.className
+function toggleSkills() {
+    let itemClass = this.parentNode.className;
+    const skillBars = this.parentNode.querySelectorAll('.skills__bar');
 
-    for (i = 0; i < skillsContent.length; i++){
-        skillsContent[i].className = 'skills__content skills__close'
+    for (let i = 0; i < skillsContent.length; i++) {
+        skillsContent[i].className = 'skills__content skills__close';
     }
 
-    if(itemClass === 'skills__content skills__close'){
-        this.parentNode.className = 'skills__content skills__open'
+    if (itemClass === 'skills__content skills__close') {
+        this.parentNode.className = 'skills__content skills__open';
+
+        skillBars.forEach(bar => {
+            bar.classList.remove('animate');
+            void bar.offsetWidth;
+            requestAnimationFrame(() => {
+                bar.classList.add('animate');
+            });
+        });
     } else {
-        this.parentNode.className = 'skills__content skills__close'
+        this.parentNode.className = 'skills__content skills__close';
     }
 }
 
 skillsHeader.forEach((el) => {
-    el.addEventListener('click', toggleSkills)
-})
+    el.removeEventListener('click', toggleSkills); // Remove the existing event listener
+    el.addEventListener('click', toggleSkills); // Add the updated event listener
+});
+
 
 
 const tabs = document.querySelectorAll('[data-target]'),

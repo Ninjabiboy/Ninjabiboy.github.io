@@ -190,7 +190,7 @@ img {
 .nav__toggle{
   color: var(--title-color);
   font-weight: var(--font-semi-bold);
-  font-size: var(--h2-font-size);
+  font-size: var(--h3-font-size);
 }
 
 .nav__logo:hover{
@@ -463,71 +463,149 @@ img {
   background-color: var(--first-color-lighter);
 }
 
-.skills__percentage{
+
+@keyframes fillBar {
+  from { width: 0; }
+  to { width: 100%; }
+}
+
+@keyframes filljava {
+  from { width: 0%; }
+  to { width: 50%; }
+}
+
+@keyframes fillpython {
+  from { width: 0%; }
+  to { width: 65%; }
+}
+
+@keyframes fillcsharp {
+  from { width: 0%; }
+  to { width: 25%; }
+}
+
+@keyframes fillhtmlcss {
+  from { width: 0%; }
+  to { width: 60%; }
+}
+
+@keyframes filljs {
+  from { width: 0%; }
+  to { width: 30%; }
+}
+
+@keyframes fillandroid {
+  from { width: 0%; }
+  to { width: 45%; }
+}
+
+@keyframes fillillustrator {
+  from { width: 0%; }
+  to { width: 40%; }
+}
+
+@keyframes fillphotoshop {
+  from { width: 0%; }
+  to { width: 65%; }
+}
+
+@keyframes fillae {
+  from { width: 0%; }
+  to { width: 45%; }
+}
+
+@keyframes fillcanva {
+  from { width: 0%; }
+  to { width: 80%; }
+}
+
+@keyframes fillwsf {
+  from { width: 0%; }
+  to { width: 80%; }
+}
+@keyframes fillpr {
+  from { width: 0%; }
+  to { width: 50%; }
+}
+
+@keyframes fillphp {
+  from { width: 0%; }
+  to { width: 40%; }
+}
+
+.skills__percentage {
   display: block;
   background-color: var(--first-color);
+  animation: fillBar 20s forwards; /* Assuming you want to start with fillBar animation */
 }
 
 
 .skills__java{
-  width: 50%
+  animation-name: filljava;
 }
 
 .skills__python{
-  width: 65%
+  animation-name: fillpython;
 }
 
 .skills__csharp{
-  width: 25%
+  animation-name: fillcsharp;
 }
 
 
 .skills__html, .skills__css{
-  width: 40%
+  animation-name: fillhtmlcss;
 }
 
 .skills__js{
-  width: 20%
+  animation-name: filljs;
 }
 
 
 .skills__android{
-  width: 45%
+  animation-name: fillandroid;
 }
 
 
-.skills__illustrator, .skills__photoshop{
-  width: 60%
+.skills__illustrator{
+  animation-name: fillillustrator;
 }
 
-.skills__canva{
-  width: 80%
-}
-
-.skills__wsf{
-  width: 80%
-}
-
-.skills__pr{
-  width: 50%
+.skills__photoshop{
+  animation-name: fillphotoshop;
 }
 
 .skills__ae{
-  width: 30%
+  animation-name: fillae;
+}
+
+
+.skills__canva{
+  animation-name: fillcanva;
+}
+
+.skills__wsf{
+  animation-name: fillwsf;
+}
+
+.skills__pr{
+  animation-name: fillpr;
 }
 
 .skills__php{
-  width: 40%
+  animation-name: fillphp;
 }
 
 .skills__close .skills__list{
   height: 0; 
   overflow: hidden;
+  transition: height 0.5s ease;
 }
 
 .skills__open .skills__list{
   height: max-content; 
   margin-bottom: var(--mb-2-5);
+  transition: height 0.5s ease;
 }
 
 .skills__open .skills__arrow{
