@@ -113,9 +113,14 @@ body {
   color: var(--text-color);
 }
 
+html, body {
+  overflow-x: hidden;
+}
+
 main {
   margin: 15px;
 }
+
 
 h1, h2, h3, h4 {
   color: var(--title-color);
@@ -230,6 +235,7 @@ img {
     border-radius: 0 0 1.5rem 1.5rem;
     transition: .3s;
   }
+  
 }
 
 .nav__list{
@@ -274,24 +280,48 @@ img {
   margin-bottom: 2rem;
 }
 
-.home__container{
+.home__container {
   gap: 1rem;
 }
 
-.home__content{
-  grid-template-columns: .5fr 3fr;
+.home__content {
+  grid-template-columns: 0.5fr 3fr;
   align-items: center;
 }
 
-.home__social{
-  display: grid;
-  grid-template-columns: max-content;
-  row-gap: 1rem;
+.home__social {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  align-items: center;
+  animation: slideAnimation 20s linear infinite;
+  overflow-x: hidden; /* Add this line to remove horizontal scroll */
 }
 
-.home__social-icon{
-  font-size: 1.25rem;
-  color: var(--first-color);
+@keyframes slideAnimation {
+  0% {
+    transform: translateX(0);
+  }
+  20% {
+    transform: translateX(10%);
+  }
+  80% {
+    transform: translateX(-10%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+
+.home__social:hover {
+  animation: slideAnimation 10s linear infinite, 
+}
+
+.home__social-icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .home__social-icon:hover{
@@ -334,7 +364,9 @@ img {
   margin-bottom: var(--mb-0-75);
   overflow: hidden;
   white-space: nowrap;
-  animation: typing 3s steps(40, end) infinite, blink-caret 0.75s step-end infinite;
+  animation: typing 4s steps(40, end) infinite, blink-caret 1s step-end infinite;
+  animation-timing-function: linear;
+  display: inline-block;
 }
 
 @keyframes typing {
@@ -343,19 +375,22 @@ img {
 }
 
 @keyframes blink-caret {
-  from, to { border-color: transparent; }
+  from, to { border-color: transparent}
   50% { border-color: var(--first-color); }
 }
 
 .home__description{
   font-size: var(--h3-font-size);
   margin-bottom: var(--mb-2);
+  display: inline-block;
 }
 
 
 .home__scroll{
   margin-bottom: 20rem;
-  display: none;
+  display: flex;
+  justify-content: center;
+  margin-top: 15px;
 }
 
 .home__scroll-button{
@@ -369,7 +404,7 @@ img {
 
 .home__scroll-mouse{
   font-size: 2rem;
-  margin-right: 10px;
+  margin-right: 7px;
 }
 
 .home__scroll-name{
@@ -580,7 +615,7 @@ img {
 .skills__percentage {
   display: block;
   background-color: var(--first-color);
-  animation: fillBar 20s forwards; /* Assuming you want to start with fillBar animation */
+  animation: fillBar 15s forwards; /* Assuming you want to start with fillBar animation */
 }
 
 
@@ -798,9 +833,9 @@ img {
   margin: 0 .5rem;
 }
 
-.scrollup{
+.scrollup {
   position: fixed;
-  right: 1rem;
+  right: 2.5rem;
   bottom: -20%;
   background-color: var(--first-color);
   opacity: .8;
@@ -808,15 +843,28 @@ img {
   border-radius: .4rem;
   z-index: var(--z-tooltip);
   transition: .4s;
+  animation: jumpAnimation 1s infinite;
 }
 
-.scrollup:hover{
+.scrollup:hover {
   background-color: var(--first-color-alt);
 }
 
-.scrollup__icon{
+.scrollup__icon {
   font-size: 1.5rem;
   color: #FFF;
+}
+
+@keyframes jumpAnimation {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+  100% {
+    transform: translateY(0);
+  }
 }
 
 .show-scroll{
