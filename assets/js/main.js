@@ -14,21 +14,19 @@ if(navClose){
     })
 }
 document.addEventListener('DOMContentLoaded', () => {
-    // Select all navigation links
+
     const navLinks = document.querySelectorAll('.nav__link');
 
     navLinks.forEach(link => {
         link.addEventListener('click', function(e) {
-            e.preventDefault(); // Prevent default anchor click behavior
+            e.preventDefault();
 
-            const targetId = this.getAttribute('href').substring(1); // Extract the target ID (without #)
+            const targetId = this.getAttribute('href').substring(1);
             const targetElement = document.getElementById(targetId);
 
             if (targetElement) {
-                // Calculate the position to scroll to accounting for a fixed header (e.g., 60px)
-                const offsetTop = targetElement.offsetTop - 60; // Adjust the 60px offset as needed
+                const offsetTop = targetElement.offsetTop - 60; 
 
-                // Smoothly scroll to the target position
                 window.scrollTo({
                     top: offsetTop,
                     behavior: "smooth"
@@ -75,8 +73,8 @@ function toggleSkills() {
 }
 
 skillsHeader.forEach((el) => {
-    el.removeEventListener('click', toggleSkills); // Remove the existing event listener
-    el.addEventListener('click', toggleSkills); // Add the updated event listener
+    el.removeEventListener('click', toggleSkills);
+    el.addEventListener('click', toggleSkills); 
 });
 
 
@@ -177,17 +175,17 @@ document.addEventListener("DOMContentLoaded", function() {
     const subtitleElement = document.getElementById("dynamicSubtitle");
     const cursorSpan = document.createElement('span');
     cursorSpan.className = 'cursor';
-    cursorSpan.textContent = ''; // You can use an empty string if you prefer
+    cursorSpan.textContent = ''; 
 
     function updateSubtitleText(text) {
-        subtitleElement.innerHTML = text + '<span class="cursor"></span>'; // Append cursor HTML after text
+        subtitleElement.innerHTML = text + '<span class="cursor"></span>'; 
     }
 
     function typeNextSubtitle() {
         if (currentSubtitleIndex >= subtitles.length) currentSubtitleIndex = 0;
         let currentCharIndex = 0;
         const nextSubtitle = subtitles[currentSubtitleIndex];
-        updateSubtitleText(''); // Clear text and show cursor
+        updateSubtitleText(''); 
         const typingInterval = setInterval(() => {
             if (currentCharIndex < nextSubtitle.length) {
                 updateSubtitleText(subtitleElement.textContent + nextSubtitle.charAt(currentCharIndex));
@@ -195,9 +193,9 @@ document.addEventListener("DOMContentLoaded", function() {
             } else {
                 clearInterval(typingInterval);
                 setTimeout(() => {
-                    cursorSpan.remove(); // Remove cursor before deleting
+                    cursorSpan.remove(); 
                     deleteCurrentSubtitle();
-                }, 2000); // Wait a bit before starting to delete
+                }, 2000); 
             }
         }, 100);
     }
@@ -209,13 +207,13 @@ document.addEventListener("DOMContentLoaded", function() {
                 updateSubtitleText(currentText.substring(0, currentText.length - 1));
             } else {
                 clearInterval(deletingInterval);
-                currentSubtitleIndex++; // Move to the next subtitle
-                setTimeout(typeNextSubtitle, 500); // Wait a bit before typing the next subtitle
+                currentSubtitleIndex++; 
+                setTimeout(typeNextSubtitle, 500); 
             }
         }, 50);
     }
 
-    // Start the typing animation for the first subtitle
+
     typeNextSubtitle();
 });
 
@@ -223,19 +221,15 @@ const themeButton = document.getElementById('theme-button');
 const darkTheme = 'dark-theme';
 const iconTheme = 'uil-sun';
 
-// Functions to get the current theme and icon
 const getCurrentTheme = () => document.body.classList.contains(darkTheme) ? 'dark' : 'light';
 const getCurrentIcon = () => themeButton.classList.contains(iconTheme) ? 'uil-moon' : 'uil-sun';
 
-// Set dark mode as the default
 document.body.classList.add(darkTheme);
 themeButton.classList.add(iconTheme);
 
-// Update localStorage with the default theme and icon
 localStorage.setItem('selected-theme', 'dark');
 localStorage.setItem('selected-icon', 'uil-moon');
 
-// Add event listener to the theme button to toggle themes
 themeButton.addEventListener('click', () => {
   document.body.classList.toggle(darkTheme);
   themeButton.classList.toggle(iconTheme);
