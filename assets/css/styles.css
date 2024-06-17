@@ -364,19 +364,26 @@ img {
   margin-bottom: var(--mb-0-75);
   overflow: hidden;
   white-space: nowrap;
-  animation: typing 4s steps(40, end) infinite, blink-caret 1s step-end infinite;
-  animation-timing-function: linear;
+}
+
+#dynamicSubtitle {
+  min-height: 50px; /* Adjust based on your font size and largest text */
   display: inline-block;
+  vertical-align: top;
 }
 
-@keyframes typing {
-  from { width: 0; }
-  to { width: 100%; }
+.cursor {
+  display: inline-block;
+  margin-left: 2px;
+  background-color: currentColor;
+  width: 2px;
+  height: 1em;
+  animation: blink-animation 1s infinite;
 }
 
-@keyframes blink-caret {
-  from, to { border-color: transparent}
-  50% { border-color: var(--first-color); }
+@keyframes blink-animation {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
 }
 
 .home__description{

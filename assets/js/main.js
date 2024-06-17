@@ -166,6 +166,59 @@ document.addEventListener('DOMContentLoaded', (event) => {
     });
 });
 
+document.addEventListener("DOMContentLoaded", function() {
+    const subtitles = [
+        "An Aspiring Software Developer",
+        "A Passionate Programmer",
+        "A Creative Problem Solver",
+        "A Tech Enthusiast"
+    ];
+    let currentSubtitleIndex = 0;
+    const subtitleElement = document.getElementById("dynamicSubtitle");
+    const cursorSpan = document.createElement('span');
+    cursorSpan.className = 'cursor';
+    cursorSpan.textContent = ''; // You can use an empty string if you prefer
+
+    function updateSubtitleText(text) {
+        subtitleElement.innerHTML = text + '<span class="cursor"></span>'; // Append cursor HTML after text
+    }
+
+    function typeNextSubtitle() {
+        if (currentSubtitleIndex >= subtitles.length) currentSubtitleIndex = 0;
+        let currentCharIndex = 0;
+        const nextSubtitle = subtitles[currentSubtitleIndex];
+        updateSubtitleText(''); // Clear text and show cursor
+        const typingInterval = setInterval(() => {
+            if (currentCharIndex < nextSubtitle.length) {
+                updateSubtitleText(subtitleElement.textContent + nextSubtitle.charAt(currentCharIndex));
+                currentCharIndex++;
+            } else {
+                clearInterval(typingInterval);
+                setTimeout(() => {
+                    cursorSpan.remove(); // Remove cursor before deleting
+                    deleteCurrentSubtitle();
+                }, 2000); // Wait a bit before starting to delete
+            }
+        }, 100);
+    }
+
+    function deleteCurrentSubtitle() {
+        const deletingInterval = setInterval(() => {
+            const currentText = subtitleElement.textContent;
+            if (currentText.length > 0) {
+                updateSubtitleText(currentText.substring(0, currentText.length - 1));
+            } else {
+                clearInterval(deletingInterval);
+                currentSubtitleIndex++; // Move to the next subtitle
+                setTimeout(typeNextSubtitle, 500); // Wait a bit before typing the next subtitle
+            }
+        }, 50);
+    }
+
+    // Start the typing animation for the first subtitle
+    typeNextSubtitle();
+});
+
 const themeButton = document.getElementById('theme-button');
 const darkTheme = 'dark-theme';
 const iconTheme = 'uil-sun';
