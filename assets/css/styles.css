@@ -134,7 +134,7 @@ body.dark-theme .nav__lg {
 .loader {
   border: 4px solid #f3f3f3;
   border-radius: 50%;
-  border-top: 4px solid #3498db;
+  border-top: 4px solid var(--first-color);
   width: 50px;
   height: 50px;
   animation: spin 2s linear infinite;
@@ -158,7 +158,7 @@ body.dark-theme .nav__lg {
 .progress {
   height: 100%;
   width: 0%;
-  background-color: #3498db;
+  background-color: var(--first-color);
   transition: width 7s linear;
 }
 
