@@ -12,9 +12,16 @@
         <title>James Portfolio Website</title>
     </head>
     <body>
+        <div id="loadingScreen" class="loading-screen">
+            <div class="loader"></div>
+            <p class="loading-message">LOADING, PLEASE WAIT...</p>
+            <div class="progress-bar">
+                <div class="progress"></div>
+            </div>
+        </div>
         <header class="header" id="header">
             <nav class="nav container">
-                <a href="" class="nav__logo" ><img class="nav__lg" src="/assets/img/uil--user.png" width="18px" height="18px" style="margin-right: 10px;" />James</a>
+                <a href="#" class="nav__logo" ><img class="nav__lg" src="/assets/img/uil--user.png" width="18px" height="18px" style="margin-right: 10px;" />James</a>
                 
                 <div class="nav__menu" id="nav-menu">
                     <ul class="nav__list grid">
@@ -205,89 +212,7 @@
                     <div class="swiper-button-prev">
                         <i class="uil uil-arrow-left swiper-portfolio-icon"></i>
                     </div>
-                </div>
-                
-            </section>
-
-            <section class="portfolio section" id = "portfolio">
-                <h2 class="section__title">Projects</h2>
-                <span class="section__subtitle">My recent endeavors</span>
-                
-                <div class="portfolio__container container swiper">
-                    <div class = "swiper-wrapper">
-                        
-                        <div class="portfolio__content swiper-slide">
-                            <img src="assets/img/Picture5.png" alt="" class="portfolio__img">
-                            <br>
-                            <div class="portfolio__data">
-                                <h3 class="portfolio__title">Water Refilling Station System</h3>
-                                <p class="portfolio__description">
-                                    A comprehensive website for a water refilling station system, streamlining customer orders, tracking deliveries, and managing inventory efficiently.
-                                </p>
-                                <a href="https://github.com/Ninjabiboy/adelforstation" target="_blank" class="button button--flex button--small portfolio__button">
-                                    GitHub
-                                    <i class="uil uil-arrow-right button__icon"></i>
-                                </a>
-                            </div>
-                        </div>
-
-                        <div class="portfolio__content swiper-slide">
-                            <img src="assets/img/fg.gif" alt="" class="portfolio__img">
-                            <br>
-                            <div class="portfolio__data">
-                                <h3 class="portfolio__title">Senior Grocery</h3>
-                                <p class="portfolio__description">
-                                    A grocery shopping app that is tailored for senior citizens which has many extensive features to enable them to be easily accessible. Made using Figma.
-                                </p>
-                                <a href="https://www.figma.com/design/5rKzFXwo2PJBucgcLxxV9w/Grocery-Shopping-App-(Community)?node-id=705-1838&t=IUUmUNrnT7UnlzWf-1" target="_blank" class="button button--flex button--small portfolio__button">
-                                    Figma
-                                    <i class="uil uil-arrow-right button__icon"></i>
-                                </a>
-                            </div>
-                        </div>
-
-                        <div class="portfolio__content swiper-slide">
-                            <img src="assets/img/qq.gif" alt="" class="portfolio__img">
-                            <br>
-                            <div class="portfolio__data">
-                                <h3 class="portfolio__title">Ebook Mobile Application</h3>
-                                <p class="portfolio__description">
-                                    Quest Quill offers users a seamless reading experience with customizable features and an intuitive interface.
-                                </p>
-                                <a href="https://github.com/Ninjabiboy/Flutter-Book-App-Latest" target="_blank" class="button button--flex button--small portfolio__button">
-                                    GitHub
-                                    <i class="uil uil-arrow-right button__icon"></i>
-                                </a>
-                            </div>
-                        </div>
-
-                        <div class="portfolio__content swiper-slide">
-                            <img src="assets/img/hotel.gif" alt="" class="portfolio__img">
-                            <br>
-                            <div class="portfolio__data">
-                                <h3 class="portfolio__title">Hotel Booking System</h3>
-                                <p class="portfolio__description">
-                                    The Hotel Booking System 
-                                    aims to automate the process of removing, updating, and adding customers and allows to manually booking a room for them. 
-                                </p>
-                                <a href="https://github.com/Ninjabiboy/Hotel-Booking-SQL" target="_blank" class="button button--flex button--small portfolio__button">
-                                    GitHub
-                                    <i class="uil uil-arrow-right button__icon"></i>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="swiper-pagination"></div>
-
-                    <div class="swiper-button-next">
-                        <i class="uil uil-arrow-right swiper-portfolio-icon"></i>
-                    </div>
-                    <div class="swiper-button-prev">
-                        <i class="uil uil-arrow-left swiper-portfolio-icon"></i>
-                    </div>
-                </div>
-                
+                </div> 
             </section>
 
             <section class="skills section" id="skills">
@@ -525,6 +450,89 @@
 
                 </div>
             </section>
+
+            <section class="portfolio section" id = "portfolio">
+                <h2 class="section__title">Projects</h2>
+                <span class="section__subtitle">My recent endeavors</span>
+                
+                <div class="portfolio__container container swiper">
+                    <div class = "swiper-wrapper">
+                        
+                        <div class="portfolio__content swiper-slide">
+                            <img src="assets/img/Picture5.png" alt="" class="portfolio__img">
+                            <br>
+                            <div class="portfolio__data">
+                                <h3 class="portfolio__title">Water Refilling Station System</h3>
+                                <p class="portfolio__description">
+                                    A comprehensive website for a water refilling station system, streamlining customer orders, tracking deliveries, and managing inventory efficiently.
+                                </p>
+                                <a href="https://github.com/Ninjabiboy/adelforstation" target="_blank" class="button button--flex button--small portfolio__button">
+                                    GitHub
+                                    <i class="uil uil-arrow-right button__icon"></i>
+                                </a>
+                            </div>
+                        </div>
+
+                        <div class="portfolio__content swiper-slide">
+                            <img src="assets/img/fg.gif" alt="" class="portfolio__img">
+                            <br>
+                            <div class="portfolio__data">
+                                <h3 class="portfolio__title">Senior Grocery</h3>
+                                <p class="portfolio__description">
+                                    A grocery shopping app that is tailored for senior citizens which has many extensive features to enable them to be easily accessible. Made using Figma.
+                                </p>
+                                <a href="https://www.figma.com/design/5rKzFXwo2PJBucgcLxxV9w/Grocery-Shopping-App-(Community)?node-id=705-1838&t=IUUmUNrnT7UnlzWf-1" target="_blank" class="button button--flex button--small portfolio__button">
+                                    Figma
+                                    <i class="uil uil-arrow-right button__icon"></i>
+                                </a>
+                            </div>
+                        </div>
+
+                        <div class="portfolio__content swiper-slide">
+                            <img src="assets/img/qq.gif" alt="" class="portfolio__img">
+                            <br>
+                            <div class="portfolio__data">
+                                <h3 class="portfolio__title">Ebook Mobile Application</h3>
+                                <p class="portfolio__description">
+                                    Quest Quill offers users a seamless reading experience with customizable features and an intuitive interface.
+                                </p>
+                                <a href="https://github.com/Ninjabiboy/Flutter-Book-App-Latest" target="_blank" class="button button--flex button--small portfolio__button">
+                                    GitHub
+                                    <i class="uil uil-arrow-right button__icon"></i>
+                                </a>
+                            </div>
+                        </div>
+
+                        <div class="portfolio__content swiper-slide">
+                            <img src="assets/img/hotel.gif" alt="" class="portfolio__img">
+                            <br>
+                            <div class="portfolio__data">
+                                <h3 class="portfolio__title">Hotel Booking System</h3>
+                                <p class="portfolio__description">
+                                    The Hotel Booking System 
+                                    aims to automate the process of removing, updating, and adding customers and allows to manually booking a room for them. 
+                                </p>
+                                <a href="https://github.com/Ninjabiboy/Hotel-Booking-SQL" target="_blank" class="button button--flex button--small portfolio__button">
+                                    GitHub
+                                    <i class="uil uil-arrow-right button__icon"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="swiper-pagination"></div>
+
+                    <div class="swiper-button-next">
+                        <i class="uil uil-arrow-right swiper-portfolio-icon"></i>
+                    </div>
+                    <div class="swiper-button-prev">
+                        <i class="uil uil-arrow-left swiper-portfolio-icon"></i>
+                    </div>
+                </div>
+                
+            </section>
+
+           
 
             <section class="experience section" id="experience">
                 <h2 class="section__title">Experience</h2>

@@ -36,6 +36,29 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 });
 
+window.onload = function() {
+    const loadingScreen = document.getElementById('loadingScreen');
+    if (loadingScreen) {
+      // Start the progress bar animation
+      const progressBar = document.querySelector('.progress');
+      if (progressBar) {
+        progressBar.style.width = '100%';
+      }
+  
+      // Hide the loading screen after 10 seconds
+      setTimeout(() => {
+        loadingScreen.style.display = 'none';
+      }, 7000); // Adjust to match the loading time
+    }
+  };
+
+  document.addEventListener('DOMContentLoaded', function() {
+    const loadingMessage = document.querySelector('.loading-message');
+    const text = loadingMessage.textContent;
+    const letters = text.split('').map((char, i) => `<span class="letter" style="--i:${i};">${char}</span>`).join('');
+    loadingMessage.innerHTML = letters;
+  });
+  
 
 const navLink = document.querySelectorAll('.nav__link')
 
@@ -165,6 +188,7 @@ document.addEventListener('DOMContentLoaded', (event) => {
         }
     });
 });
+
 
 document.addEventListener("DOMContentLoaded", function() {
     const subtitles = [
