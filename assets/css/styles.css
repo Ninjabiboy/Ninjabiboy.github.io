@@ -868,7 +868,7 @@ img {
   transform: rotate(-180deg);
 }
 
-.portfolio__container{
+.portfolio__container, resume__container{
   overflow: initial;
 }
 
