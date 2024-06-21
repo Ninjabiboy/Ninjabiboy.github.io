@@ -48,7 +48,7 @@ window.onload = function() {
       // Hide the loading screen after 10 seconds
       setTimeout(() => {
         loadingScreen.style.display = 'none';
-      }, 5000); // Adjust to match the loading time
+      }, 3000); // Adjust to match the loading time
     }
   };
 

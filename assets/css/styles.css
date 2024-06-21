@@ -92,7 +92,7 @@ body.dark-theme .nav__lg {
   z-index: 9999;
   background: linear-gradient(135deg, #3498db 0%, #9b59b6 100%);
   background-size: 200% 200%; /* Make the background larger to enable the animation */
-  animation: gradientShift 5s ease infinite;
+  animation: gradientShift 3s ease infinite;
 }
 
 @keyframes gradientShift {
@@ -128,7 +128,7 @@ body.dark-theme .nav__lg {
 .letter {
   display: inline-block;
   animation: jump 2.5s ease infinite;
-  animation-delay: calc(0.2s * var(--i)); /* Delay based on the letter index */
+  animation-delay: calc(0.05s * var(--i)); /* Delay based on the letter index */
 }
 
 .loader {
@@ -159,7 +159,7 @@ body.dark-theme .nav__lg {
   height: 100%;
   width: 0%;
   background-color: var(--first-color);
-  transition: width 5s linear;
+  transition: width 3s linear;
 }
 
 @keyframes spin {
